@@ -14,8 +14,8 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # Telegram API & MongoDB credentials (REPLACE WITH YOURS)
-TELEGRAM_BOT_TOKEN = "6982857776:AAFDG6KtTz4T6jYjeZiwFdqZgTpqSW8Mj3Y"
-MONGO_URI = "mongodb+srv://jonny:ranbal1@jonny.wwfqv.mongodb.net/?retryWrites=true&w=majority&appName=jonny"
+TELEGRAM_BOT_TOKEN = "7963431937:AAEwCqZHa-LW0uXonYXnHJuaTBgJZ341d-w"
+MONGO_URI = "mongodb+srv://rider:ranbal1@rider.wve0w.mongodb.net/?retryWrites=true&w=majority&appName=rider"
 DB_NAME = "TEST"
 
 # Database setup
