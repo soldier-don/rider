@@ -22,6 +22,7 @@ TELEGRAM_BOT_TOKEN = "7963431937:AAEwCqZHa-LW0uXonYXnHJuaTBgJZ341d-w"
 MONGO_URI = "mongodb+srv://rider:ranbal1@rider.wve0w.mongodb.net/?retryWrites=true&w=majority&appName=rider"
 DB_NAME = "TEST"
 
+
 # Database setup
 client = MongoClient(MONGO_URI)
 db = client[DB_NAME]
@@ -49,7 +50,7 @@ def is_owner(user_id):
     return user_id == OWNER_USER_ID
 
 def is_admin(user_id):
-    admin = admins_collection.find_one({"user_ user_id})
+    admin = admins_collection.find_one({"user_id": user_id})
     if admin and "expiry" in admin:
         current_time = datetime.datetime.utcnow()
         if admin["expiry"] > current_time:
@@ -61,7 +62,7 @@ def is_admin(user_id):
 def is_approved(user_id):
     user_approval = approved_users_collection.find_one({"user_id": user_id})
     if user_approval and "expiry" in user_approval:
-        current_time = datetime.datetime.id":utcnow()
+        current_time = datetime.datetime.utcnow()
         if user_approval["expiry"] >= current_time:
             return True
         else:
